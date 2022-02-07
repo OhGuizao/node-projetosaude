@@ -1,0 +1,47 @@
+|------------------------------------>     Começo do Backend       <------------------------------------|
+                                           
+1°    Para o início do Backend, baixamos os módulos do cors, do mysql e do express.
+2°    Logo após criamos o entry point: index.js e dentro dele importamos todos os módulos.
+3°    Preparamos o servidor para receberos dados e aplicamos o cors nele.
+4°    Começamos o banco de dados criando um data(dbsaude), e outras duas tabelas (tbproduto e tbusuario).
+5°    Voltamos ao index e adicionamos um crud a rota de produtos e a rota de usuarios.
+6°    No final do arquivo, subimos o servidor na porta 5000.
+
+|------------------------------------>    Fim do Backend       <------------------------------------|
+
+
+ 
+###################################### Codigo do banco de dados ######################################
+create database dbSaude;
+use dbSaude;
+create table `tbUsuario`(
+	`idUsuario` mediumint(8) unsigned auto_increment NOT NULL,
+    `tipoUsuario` varchar(20) NOT NULL,
+	`nomeUsuario` varchar(40) NOT NULL,
+	`cpfUsuario` varchar(15) NOT NULL unique,
+	`idadeUsuario` mediumint(3) NULL,
+	`pesoUsuario` decimal(6,2)  NULL,
+    `user` varchar(20) NOT NULL unique,
+    `password` varchar(20) NOT NULL,
+	PRIMARY KEY (`idUsuario`)
+) ENGINE=MyISAM AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
+
+create table `tbProduto`(
+	`idProduto` int(8) unsigned NOT NULL AUTO_INCREMENT,
+	`nomeProduto` varchar(50) NOT NULL,
+	`descricaoProduto` text NOT NULL,
+	`precoProduto` decimal(10,2) NOT NULL,
+	`fotoProduto` varchar(500) NOT NULL,
+	PRIMARY KEY (`idproduto`)
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1
+######################################################################################################
+
+
+
+|------------------------------------>     Começo do Frontend       <------------------------------------|
+
+1°    No arquivo index.html, relacionamos com as pastas de css e js que iremos utilizar.
+2°    Adicionamos um favicon.
+3°    Pegamos componentes de "carrousel" e "navbar" do http://getbootstrap.com (bootstrap), e adicionamos ao projeto, fazendo nossas alteraçôes.
+
+|------------------------------------>     Fim do Frontend       <------------------------------------|
