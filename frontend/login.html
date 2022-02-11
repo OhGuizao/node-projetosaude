@@ -33,6 +33,7 @@
             <a class="nav-link" href="minhasaude.html">Minha Saúde</a>
             <a class="nav-link" href="doacao.html">Doação</a>
             <a class="nav-link active" href="login.html">Login</a>
+            <a class="nav-link" href="cadastro.html">Cadastrar</a>
           </div>
         </div>
       </div>
@@ -42,27 +43,25 @@
     <!-- COMEÇO DO CONTEÚDO -->
     <div class="container">
       <div class="row">
+        <div class="col-5"></div>
         <div class="col-1" style="flex-direction: row">
-          <a
-            href="login.html"
-            class="cor-vermelha sublinhado"
-            ><h3>Login</h3></a
+          <a href="login.html" class="cor-vermelha sublinhado"
+            ><h3><strong>Login</strong></h3></a
           >
         </div>
-        <div class="col-11">
-          <a
-            href="cadastro.html"
-            class="cor-vermelha sublinhado-desselecionado"
-            ><h4>Cadastro</h4></a
+        <div class="col-1">
+          <a href="cadastro.html" class="cor-vermelha sublinhado"
+            ><h3>Cadastrar</h3></a
           >
         </div>
+        <div class="col-5"></div>
 
         <hr />
         <br /><br />
 
         <!-- INICIO DO FORMS -->
         <div class="col-12">
-          <form>
+          <form onsubmit="return false;">
             <div class="mb-3">
               <label class="visually-hidden" for="autoSizingInputGroup"
                 >Usuário</label
@@ -97,14 +96,21 @@
                 />
               </div>
             </div>
-            <button type="enviar" class="botao">Entrar</button>
+            <div class="row">
+              <div class="col-6">
+                <button type="cancelar" class="botao" onclick="location.href='index.html';"><h6>Cancelar</h6></button>
+              </div>
+              <div class="col-6">
+                <button type="entrar" class="botao" onclick="verificaToken()"><h6>Entrar</h6></button>
+              </div>
+            </div>
           </form>
         </div>
         <!-- FIM DO FORMS -->
       </div>
     </div>
     <!-- FIM DO CONTEÚDO -->
-    <script src="js/"></script>
+    <script src="js/acao.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

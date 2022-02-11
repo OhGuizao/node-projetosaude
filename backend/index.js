@@ -29,7 +29,7 @@ const conexaoDB = mysql.createConnection({
   host: "localhost",
   user: "root",
   password: "",
-  database: "dbSaude",
+  database: "dbsaude",
 });
 
 //Teste e conexão com o banco de dados.
@@ -187,6 +187,8 @@ app.post("/saudemais/usuarios/cadastrar", (req, res) => {
     if (erro)
       return res.status(500).send({ msg: `Erro ao gerar senha : ${erro}` });
     req.body.password = msg;
+
+console.log(req.body)
 
     conexaoDB.query(
       "insert into tbusuario set ?",

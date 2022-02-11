@@ -16,8 +16,8 @@ function verificaToken(req, res, next) {
     if (erro)
       return res.status(500).send({ msg: `Erro interno -> ${erro}` });
     req.content = {
-      id: resultado.idUsuario,
-      usuario: resultado.nomeUsuario,
+      user: usuario.value,
+      password: senha.value
     };
     return next();
   });
