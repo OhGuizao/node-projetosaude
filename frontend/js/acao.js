@@ -53,16 +53,15 @@ function carregarDadosAPI() {
             resultado.msg.map((itens, ix) => {
 
 
-                linha += `<div class="card col-4 text-center">
-                        <img src="${itens.fotoProduto}" class="card-img-top" alt="...">
+                linha += `<div class="card col-3 text-center">
+                        <center><img src="${itens.fotoProduto}" class="card-img-top" style="width: 250px; height: 250px; align-content: center; justify-content: center;"></center>
                         <div class="card-body">
                             <h5 class="card-title">${itens.nomeProduto}</h5>
                             <p class="card-text">${itens.descricaoProduto}.</p>
                             <p class="card-text"><h4>Preço:</h4>${itens.precoProduto}R$</p>
                         </div>
                         <div class="card-footer">
-                            <a href="atualizar.html?id=${itens.idProduto}">Atualizar</a>
-                            <a href="apagar.html?id=${itens.idProduto}">Apagar</a>
+                            <a href="comprar.html?id=${itens.idProduto}" class="botaoVisu"><h4> Comprar</h4></a>
                         </div>
                     </div>`
 

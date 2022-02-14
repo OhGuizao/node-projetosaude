@@ -19,6 +19,20 @@
   background-color: #e72d2e;
   width: 100px;
   height: 50px;
-  color: black
+  color: black;
   text-decoration: none;
+}
+
+.botaoVisu {
+  border-radius: 20px;
+  width: 200;
+  height: 200;
+  color: #e72d2e;
+  text-decoration: none;
+  font-size: larger;
+}
+#gif{
+justify-content: center;
+align-items: center;
+padding-top: 180px;
 }
