@@ -207,17 +207,17 @@ console.log(req.body)
 });
 
 //--------------->  POST(LOGIN)
-app.post("/login", (req, res) => {
-  conexao.query(
-    "SELECT * FROM tbusuario WHERE id=?",
-    [req.body.id],
+app.post("/saudemais/usuarios/login", (req, res) => {
+  conexaoDB.query(
+    "SELECT * FROM tbusuario WHERE user=?",
+    [req.body.user],
     (erro, resultado) => {
       if (erro) return res.status(500).send({ msg: `Erro -> ${erro}` });
 
       if (dados == null)
         return res.status(404).send({ msg: `Usuário ou senha incorreto` });
 
-      bcrypt.compare(req.body.senha, dados[0].senha, (erro, igual) => {
+      bcrypt.compare(req.body.password, dados[0].password, (erro, igual) => {
         if (erro)
           return res.status(500).send({ retorno: `Erro interno -> ${erro}` });
         if (!igual) return res.status(400).send({ retorno: `Senha incorreta` });
